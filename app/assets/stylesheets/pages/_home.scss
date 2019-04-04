@@ -1,1 +1,43 @@
 // Specific CSS for your home-page
+.generic-flex-container {
+  display: grid;
+  width: 900px;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.flex-trending-tile {
+  display: flex;
+  width: 400px;
+  margin: 20px;
+  box-shadow: 0px 1px 1px grey;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.tile-background img {
+  width: 100%;
+}
+
+.tile-content {
+  padding: 20px;
+}
+
+.tile-content h2 {
+  font-size: 20px;
+
+}
+
+.tile-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tile-center-add {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

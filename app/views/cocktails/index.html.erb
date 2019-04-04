@@ -1,7 +1,155 @@
-<h1>index view of cocktail</h1>
+    <!-- nav_bar -->
 
-<%= link_to "create new drink", new_cocktail_path %>
-<h4><% @cocktails.each do |cocktail| %></h4>
-  <p><%= cocktail.name  %></p>
-  <p><%= link_to "details", cocktail_path(cocktail.id) %></p>
-<% end  %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+      <%= link_to "#", class: "navbar-brand " do %>
+      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <% end %>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- banner video -->
+
+    <div class="homepage-hero-module">
+      <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop muted playsinline src="assets/Date.mp4" class="fillWidth"></video>
+        <div class="poster hidden">
+          <img src="PATH_TO_JPEG" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- testing tile (looped)-->
+
+    <section id="trending-carousel" class="hidden-xs">
+      <div class="generic-flex-container">
+
+        <div class="flex-trending-tile">
+          <div class="tile-center">
+            <div class="tile-content-add">
+              <div><i class="fas fa-cocktail"></i></div>
+              <div><%= link_to "create new drink", new_cocktail_path %></div>
+            </div>
+          </div>
+        </div>
+
+
+        <% @cocktails.each do |cocktail| %>
+        <div class="flex-trending-tile">
+          <a class="trending-item" href="//www.liquor.com/articles/family-jones-denver/">
+            <div class="tile-background">
+              <img src="//cdn.liquor.com/wp-content/uploads/2019/03/28085319/Dont-Take-for-Granted-You-Get-to-Use-Campari-This-Denver-Bar-Has-to-Make-Every-Bottle-from-Scratch-720x720-article.jpg"
+              class="img-responsive">
+            </div>
+            <div class="tile-content">
+              <h2><%= cocktail.name  %></h2>
+              <p><%= link_to "details", cocktail_path(cocktail.id) %></p>
+            </div>
+          </a>
+        </div>
+        <% end  %>
+
+      </div>
+    </section>
+
+    <!-- testing tile (copied)
+    <section>
+     <div class="generic-flex-container">
+      <div class="flex-trending-tile">
+        <a class="trending-item" href="//www.liquor.com/articles/family-jones-denver/">
+          <div class="tile-background">
+            <img src="//cdn.liquor.com/wp-content/uploads/2019/03/28085319/Dont-Take-for-Granted-You-Get-to-Use-Campari-This-Denver-Bar-Has-to-Make-Every-Bottle-from-Scratch-720x720-article.jpg"
+            class="img-responsive">
+          </div>
+          <div class="tile-content">
+            <h2>Don't Take Your Campari for Granted. This Denver Bar Has to Make Every Bottle from Scratch.</h2>
+          </div>
+        </a>
+      </div>
+
+      <div class="flex-trending-tile">
+        <a class="trending-item" href="//www.liquor.com/series/drink-here-now-2019/">
+          <div class="tile-background">
+            <img src="//cdn.liquor.com/wp-content/uploads/2019/03/14102121/drink-here-now_header2019_720x720-1.jpg"
+            class="img-responsive">
+          </div>
+          <div class="tile-content">
+            <h2>Drink Here Now 2019: The 297 Bars That Matter Most—Right Now</h2>
+          </div>
+        </a>
+      </div>
+      <div class="flex-trending-tile">
+        <a class="trending-item" href="//www.liquor.com/articles/bar-citrus-repurposing/">
+          <div class="tile-background">
+            <img src="//cdn.liquor.com/wp-content/uploads/2019/03/28203749/Repurpose-Your-Citrus-with-This-Waste-Reducing-Hack-720x720-article.jpg"
+            class="img-responsive">
+          </div>
+          <div class="tile-content">
+            <h2>Repurpose Your Citrus with This Waste-Reducing Hack</h2>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <div class="container">
+
+    <h1>index view of cocktail</h1>
+
+    <%= link_to "create new drink", new_cocktail_path %>
+
+    <div class="list_drinks">
+
+      <h4><% @cocktails.each do |cocktail| %></h4>
+      <div class="card-trip">
+        <img src="https://loremflickr.com/320/240/alcohol">
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= cocktail.name  %></h2>
+            <p><%= link_to "details", cocktail_path(cocktail.id) %></p>
+          </div>
+          <h2 class="card-trip-pricing">£99.99</h2>
+
+        </div>
+        <% end  %>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+-->
+
+
+
+
+
