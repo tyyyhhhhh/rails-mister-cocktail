@@ -1,0 +1,24 @@
+<h1>showing cocktails/:id</h1>
+
+<h4><%= @cocktail.name %></h4>
+<p>name of the drink</p>
+
+
+<h4>Ingredients</h4>
+<ol>
+  <p><% @cocktail.ingredients.each do |ingredient| %></p>
+  <li><%= ingredient.name %></li>
+  <p><% end %></p>
+</ol>
+
+<h4>Doses</h4>
+<ul>
+  <p><% @cocktail.doses.each do |dose| %></p>
+  <li><%= dose.description %></li>
+  <p><%= link_to "dose's detailed", cocktail_dose_path(@cocktail.id) %></p>
+  <p><% end %></p>
+</ul>
+
+
+<p><%= link_to "see all cocktails", cocktails_path %></p>
+<p><%= link_to "create a new dose", new_cocktail_dose_path(@cocktail.id) %></p>

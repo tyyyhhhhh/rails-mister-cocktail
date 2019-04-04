@@ -1,0 +1,7 @@
+<h1>index view of cocktail</h1>
+
+<%= link_to "create new drink", new_cocktail_path %>
+<h4><% @cocktails.each do |cocktail| %></h4>
+  <p><%= cocktail.name  %></p>
+  <p><%= link_to "details", cocktail_path(cocktail.id) %></p>
+<% end  %>
