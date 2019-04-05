@@ -34,10 +34,13 @@
     <div class="homepage-hero-module">
       <div class="video-container">
         <div class="filter"></div>
-        <video autoplay loop muted playsinline src="assets/Date.mp4" class="fillWidth"></video>
+        <%= video_tag(["Date.mp4"], :size => "1200x1000", :autoplay => true, :loop => true) %>
+<!--
+        <video autoplay loop muted playsinline src="assets/Date.mp4" class="fillWidth"></video> -->
         <div class="poster hidden">
-          <%= image_tag "Screenshot_cover.png", alt: "Le Wagon", width: 200 %>
-          <!-- <img src="PATH_TO_JPEG" alt=""> -->
+
+          <!--     <%= image_tag "Screenshot_cover.png", alt: "Le Wagon", width: 200 %>
+            <img src="PATH_TO_JPEG" alt=""> -->
         </div>
       </div>
     </div>
@@ -61,8 +64,9 @@
         <div class="flex-trending-tile">
           <a class="trending-item" href="//www.liquor.com/articles/family-jones-denver/">
             <div class="tile-background">
-              <img src="//cdn.liquor.com/wp-content/uploads/2019/03/28085319/Dont-Take-for-Granted-You-Get-to-Use-Campari-This-Denver-Bar-Has-to-Make-Every-Bottle-from-Scratch-720x720-article.jpg"
-              class="img-responsive">
+              <%= image_tag "cocktail.jpg", alt: "Le Wagon", width: 200 %>
+             <!--  <img src="//cdn.liquor.com/wp-content/uploads/2019/03/28085319/Dont-Take-for-Granted-You-Get-to-Use-Campari-This-Denver-Bar-Has-to-Make-Every-Bottle-from-Scratch-720x720-article.jpg"
+              class="img-responsive"> -->
             </div>
             <div class="tile-content">
               <h2><%= cocktail.name  %></h2>
